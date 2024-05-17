@@ -224,7 +224,7 @@ namespace LiveCharts.Wpf
             SetCurrentValue(LabelsPositionProperty, BarLabelPosition.Top);
 
             Func<ChartPoint, string> defaultLabel = x => x.EvaluatesGantt
-                ? string.Format("starts {0}, ends {1}", Model.CurrentXAxis.GetFormatter()(x.XStart),
+                ? string.Format("De {0} Até {1}", Model.CurrentXAxis.GetFormatter()(x.XStart),
                     Model.CurrentXAxis.GetFormatter()(x.X))
                 : Model.CurrentXAxis.GetFormatter()(x.X);
             SetCurrentValue(LabelPointProperty, defaultLabel);
